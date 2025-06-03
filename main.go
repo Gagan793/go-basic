@@ -31,6 +31,7 @@ func main() {
 		if isValidEmail && isValidName && isValidTicketCount {
 			//fmt.Printf("We onle have %v tickets\n", remainingTickets)
 			bookTicket(userTickets, firstName, lastName, email)
+			go sendTicket(userTickets, firstName, lastName, email)
 			firstNames := getFirst()
 			fmt.Printf("the first names of bookings are: %v\n", firstNames)
 			if remainingTickets == 0 {
