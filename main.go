@@ -8,7 +8,14 @@ var conferenceName = "Go Conference"
 var remainingTickets uint = 50
 
 // this is empty list of maps
-var bookings = make([]map[string]string, 0)
+var bookings = make([]UserData, 0)
+
+type UserData struct {
+	firstName       string
+	lastName        string
+	email           string
+	numberofTickets uint
+}
 
 func main() {
 
